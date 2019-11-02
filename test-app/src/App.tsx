@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  Route,
+  Router,
+  Switch,
+} from "react-router";
 import './App.css';
+import {ButtonsPage, HomePage} from "./pages";
+import { createBrowserHistory } from 'history';
+const history = createBrowserHistory();
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+type AppProps = {
+  // Nothing here;
 }
+
+const App: React.FC<AppProps> = () => {
+  return (
+    <Router history={history}>
+      <Switch>
+        <Route path="/" exact={true} component={HomePage}/>
+        <Route path="/buttons" exact={true} component={ButtonsPage}/>
+      </Switch>
+    </Router>
+  );
+};
 
 export default App;

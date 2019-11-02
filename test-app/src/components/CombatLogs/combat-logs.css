@@ -1,0 +1,24 @@
+
+.combat-logs-box {
+  border: grey 1px solid;
+  display: flex;
+  height: 100px;
+  overflow: auto;
+  width: 500px;
+  flex-direction: column;
+}
+
+.combat-log-message {
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+.combat-log-message.damage {
+  color: red;
+}
+.combat-log-message.heal {
+  color: green;
+}
+.combat-log-message.status {
+  color: blue;
+}
