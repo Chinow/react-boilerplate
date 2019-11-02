@@ -1,0 +1,24 @@
+.health-bar {
+  height: 12px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  border: grey 1px solid;
+}
+
+.hp-status {
+  border-radius: 7px;
+  transition: width linear .5s;
+}
+
+.healthy {
+  background-color: green;
+}
+
+.medium {
+  background-color: yellow;
+}
+
+.low {
+  background-color: red;
+}
