@@ -18,5 +18,11 @@ describe('<CombatLogs />', () => {
 
     expect(wrapper.text()).toContain('statusMessage');
     expect(wrapper.text()).toContain('damageMessage');
+  });
+
+  it('should display empty', () => {
+    const wrapper = mount(<CombatLogs messages={[]}/>)
+
+    expect(wrapper.text()).toBe('');
   })
 });
