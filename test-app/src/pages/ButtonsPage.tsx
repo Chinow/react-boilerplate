@@ -49,7 +49,12 @@ export const ButtonsPage: React.FC<{}> = () => {
     <div style={{
       justifyContent: 'center',
       display: 'flex',
+      background: 'lightgray',
+      height: '100%',
+      flexDirection: 'column',
+      alignItems: 'center'
     }}>
+      <h2>RPG</h2>
       <div style={{
         display: 'flex',
         flexDirection: 'column',
@@ -57,7 +62,11 @@ export const ButtonsPage: React.FC<{}> = () => {
         width: '600px',
         height: '150px',
         alignSelf: 'center',
-        gap: '10px'
+        gap: '10px',
+        backgroundColor: 'white',
+        margin: '10px',
+        borderRadius: '5px',
+        boxShadow: '5px 3px 3px grey'
       }}>
         <div style={{
           display: 'flex',

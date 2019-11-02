@@ -5,6 +5,7 @@
   flex-grow: 1;
   overflow: auto;
   flex-direction: column;
+  height: 125px;
 }
 
 .combat-log-message {
