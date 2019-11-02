@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {
+  Buffs,
   CombatLogMessage,
   CombatLogs,
   HealMeButton, HealthBar,
@@ -54,18 +55,29 @@ export const ButtonsPage: React.FC<{}> = () => {
         flexDirection: 'column',
         padding: '24px',
         width: '600px',
+        height: '150px',
         alignSelf: 'center',
         gap: '10px'
       }}>
-        <HealthBar health={HPs} maxHealth={maxHP}/>
         <div style={{
           display: 'flex',
+          width: '100%',
+        }}>
+          <HealthBar health={HPs} maxHealth={maxHP}/>
+        </div>
+        <div style={{
+          display: 'flex',
+          gap: '5px',
+          height: '100%'
         }}>
           <div style={{
-
+            flexDirection: 'column',
+            display: 'flex',
+            gap: '5px',
           }}>
             <HitMeButton onHit={takeDamage}/>
             <HealMeButton onHeal={healDamage}/>
+            <Buffs/>
           </div>
           <CombatLogs messages={combatLogs}/>
         </div>

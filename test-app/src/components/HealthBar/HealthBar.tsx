@@ -42,12 +42,16 @@ export const HealthBar: React.FC<HeathBatProp> = ({health, maxHealth}) => {
       background: 'white',
       borderRadius: '4px',
       border: 'grey 1px solid',
-      padding: '3px'
+      padding: '3px',
     }}>{health}</div>
   };
 
   return (
     <div
+      style={{
+        display: "flex",
+        width: '100%',
+      }}
       className="health-bar"
       onMouseMove={storeMousePosition}
       onMouseEnter={toggleHovered(true)}
