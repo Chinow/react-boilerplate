@@ -5,7 +5,7 @@ import {
   Switch,
 } from "react-router";
 import './App.css';
-import {ButtonsPage, HomePage} from "./pages";
+import { HomePage } from "./pages";
 import { createBrowserHistory } from 'history';
 const history = createBrowserHistory();
 
@@ -18,7 +18,6 @@ const App: React.FC<AppProps> = () => {
     <Router history={history}>
       <Switch>
         <Route path="/" exact={true} component={HomePage}/>
-        <Route path="/buttons" exact={true} component={ButtonsPage}/>
       </Switch>
     </Router>
   );
